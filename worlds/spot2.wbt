@@ -1,0 +1,410 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/appearances/protos/ThreadMetalPlate.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/appearances/protos/Roughcast.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/factory/containers/protos/PlasticCrate.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/obstacles/protos/OilBarrel.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/factory/containers/protos/CardboardBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/factory/tools/protos/PlatformCart.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/tables/protos/Table.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/solids/protos/SolidBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/robotis/turtlebot/protos/TurtleBot3Burger.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/devices/robotis/protos/RobotisLds01.proto"
+
+WorldInfo {
+  info [
+    "Simulation of Boston Dynamics' Spot robot in a simple industrial environment."
+    "The robot is saying hello with its right leg."
+  ]
+  title "Spot Robot demo"
+}
+Viewpoint {
+  orientation 0.1640556713048985 -0.02027807274926707 -0.9862426357029362 2.9539269688241303
+  position 3.2844383543868574 0.06933672149248929 0.3593453276540979
+  follow "TurtleBot3Burger"
+  followType "Mounted Shot"
+  followSmoothness 0
+}
+TexturedBackground {
+  texture "factory"
+  skybox FALSE
+}
+TexturedBackgroundLight {
+  texture "factory"
+}
+RectangleArena {
+  rotation 0 1 0 0
+  floorSize 10 11
+  floorAppearance ThreadMetalPlate {
+    textureTransform TextureTransform {
+      scale 0.7 0.7
+    }
+  }
+  wallThickness 0.1
+  wallHeight 1
+  wallAppearance Roughcast {
+    colorOverride 0.662745 0.662745 0.662745
+    textureTransform TextureTransform {
+      scale 10 10
+    }
+  }
+}
+SolidBox {
+  translation -0.473137 -1.35965 0.25
+  name "box(14)"
+  size 0.5 0.5 0.5
+  appearance PBRAppearance {
+    baseColorMap ImageTexture {
+      url [
+        "../Final_Mobi/Markers/5.jpg"
+      ]
+    }
+    roughness 0.5
+    metalness 0
+    textureTransform TextureTransform {
+    }
+  }
+}
+SolidBox {
+  translation 1.97166 -1.39694 0.25
+  name "box(15)"
+  size 0.5 0.5 0.5
+  appearance PBRAppearance {
+    baseColorMap ImageTexture {
+      url [
+        "../Final_Mobi/Markers/6.jpg"
+      ]
+    }
+    roughness 0.5
+    metalness 0
+    textureTransform TextureTransform {
+    }
+  }
+}
+SolidBox {
+  translation -3.14537 1.65572 0.25
+  name "box(16)"
+  size 0.5 0.5 0.5
+  appearance PBRAppearance {
+    baseColorMap ImageTexture {
+      url [
+        "../Final_Mobi/Markers/7.jpg"
+      ]
+    }
+    roughness 0.5
+    metalness 0
+    textureTransform TextureTransform {
+    }
+  }
+}
+SolidBox {
+  translation -0.483459 1.66675 0.25
+  name "box(17)"
+  size 0.5 0.5 0.5
+  appearance PBRAppearance {
+    baseColorMap ImageTexture {
+      url [
+        "../Final_Mobi/Markers/8.jpg"
+      ]
+    }
+    roughness 0.5
+    metalness 0
+    textureTransform TextureTransform {
+    }
+  }
+}
+SolidBox {
+  translation -3.09523 -1.31398 0.25
+  name "box(13)"
+  size 0.5 0.5 0.5
+  appearance PBRAppearance {
+    baseColorMap ImageTexture {
+      url [
+        "../Final_Mobi/Markers/4.jpg"
+      ]
+    }
+    roughness 0.5
+    metalness 0
+    textureTransform TextureTransform {
+    }
+  }
+}
+Table {
+  translation 1.9685 -0.273611 -1.27898e-13
+  name "table(7)"
+  size 0.8 1.6 0.74
+}
+Table {
+  translation -3.19563 -3.23788 0
+  name "table(6)"
+  size 0.8 1.6 0.74
+}
+Table {
+  translation 2.0058 -3.29379 3.55271e-15
+  name "table(5)"
+  size 0.8 1.6 0.74
+}
+Table {
+  translation -0.47865 2.74515 0
+  name "table(4)"
+  size 0.8 1.6 0.74
+}
+Table {
+  translation -3.25196 2.7733 0
+  size 0.8 1.6 0.74
+}
+Table {
+  translation -3.19564 -0.253405 0
+  name "table(1)"
+  size 0.8 1.6 0.74
+}
+Table {
+  translation -0.49271 -3.2801 0
+  name "table(2)"
+  size 0.8 1.6 0.74
+}
+Table {
+  translation -0.506796 -0.253398 0
+  name "table(3)"
+  size 0.8 1.6 0.74
+}
+PlasticCrate {
+  translation -0.533904 0.0843703 0.75
+  rotation 0 0 -1 0.916294
+  size 0.3 0.5 0.2
+}
+PlasticCrate {
+  translation -0.490442 -2.99354 0.75
+  rotation 0 0 -1 0.916294
+  name "plastic crate(3)"
+  size 0.3 0.5 0.2
+}
+PlasticCrate {
+  translation 1.98713 -0.0742288 0.75
+  rotation 0 0 -1 0.916294
+  name "plastic crate(5)"
+  size 0.3 0.5 0.2
+}
+PlasticCrate {
+  translation 2.12319 -3.04675 0.75
+  rotation 0 0 -1 0.916294
+  name "plastic crate(1)"
+  size 0.3 0.5 0.2
+}
+PlasticCrate {
+  translation -3.1497 0.0520517 0.75
+  rotation 0 0 -1 0.916294
+  name "plastic crate(2)"
+  size 0.3 0.5 0.2
+}
+PlasticCrate {
+  translation -3.17437 -2.93165 0.75
+  rotation 0 0 -1 0.916294
+  name "plastic crate(4)"
+  size 0.3 0.5 0.2
+}
+PlasticCrate {
+  translation -3.26849 3.09016 0.75
+  rotation 0 0 -1 0.916294
+  name "plastic crate(6)"
+  size 0.3 0.5 0.2
+}
+PlasticCrate {
+  translation -0.492796 3.10487 0.75
+  rotation 0 0 -1 0.916294
+  name "plastic crate(7)"
+  size 0.3 0.5 0.2
+}
+OilBarrel {
+  translation 4.67 0 0.44
+}
+OilBarrel {
+  translation 4.69 -0.68 0.44
+  name "oil barrel(1)"
+}
+OilBarrel {
+  translation 4.53 -1.34 0.44
+  name "oil barrel(2)"
+}
+OilBarrel {
+  translation 4.05 -0.22 0.44
+  name "oil barrel(3)"
+}
+OilBarrel {
+  translation 3.89 -1.04 0.44
+  name "oil barrel(4)"
+}
+OilBarrel {
+  translation 4.36 -1.04 1.32
+  name "oil barrel(5)"
+}
+OilBarrel {
+  translation 4.25 -0.27 1.32
+  name "oil barrel(6)"
+}
+CardboardBox {
+  translation 4.1693 -3.6265 0.28
+  rotation 0 0 -1 0.785395307179586
+  name "cardboard box(4)"
+  size 0.3 0.3 0.3
+}
+CardboardBox {
+  translation -0.435109 -3.7246 0.9
+  rotation 0 0 -1 0.523596
+  name "cardboard box(1)"
+  size 0.3 0.3 0.3
+}
+CardboardBox {
+  translation 2.00475 -3.74327 0.9
+  rotation 0 0 -1 0.523596
+  name "cardboard box(2)"
+  size 0.3 0.3 0.3
+}
+CardboardBox {
+  translation 1.88606 -0.713694 0.9
+  rotation 0 0 -1 0.523596
+  name "cardboard box(3)"
+  size 0.3 0.3 0.3
+}
+CardboardBox {
+  translation -0.48619 -0.73592 0.9
+  rotation 0 0 1 -0.785395307179586
+  name "cardboard box(6)"
+  size 0.3 0.3 0.3
+}
+CardboardBox {
+  translation -3.25924 -0.716755 0.9
+  rotation 0 0 -1 0.523596
+  name "cardboard box(7)"
+  size 0.3 0.3 0.3
+}
+CardboardBox {
+  translation -3.16537 -3.72115 0.9
+  rotation 0 0 -1 0.523596
+  name "cardboard box(8)"
+  size 0.3 0.3 0.3
+}
+CardboardBox {
+  translation -3.24833 2.29506 0.9
+  rotation 0 0 -1 0.523596
+  name "cardboard box(9)"
+  size 0.3 0.3 0.3
+}
+CardboardBox {
+  translation -0.488682 2.21657 0.9
+  rotation 0 0 -1 0.523596
+  name "cardboard box(10)"
+  size 0.3 0.3 0.3
+}
+CardboardBox {
+  translation 3.91386 -3.92706 0.28
+  rotation 0 0 1 -0.785395307179586
+  name "cardboard box(5)"
+  size 0.3 0.3 0.3
+}
+PlatformCart {
+  hidden position_0_0 -8.400087115140572e-09
+  hidden position2_0_0 8.668657025979838e-05
+  hidden position_0_1 -8.397436478530217e-09
+  hidden position2_0_1 8.662712711299916e-05
+  hidden position_0_2 8.615044795688383e-05
+  hidden position_0_3 8.609100559053907e-05
+  hidden rotation_2 0.9999999981213665 4.333892582357407e-05 -4.334748510372945e-05 1.5708000018789967
+  hidden rotation_3 0.9999999981239421 4.3309205684777595e-05 -4.331776220512796e-05 1.5708000018764214
+  hidden rotation_4 0.9999999981445319 4.307506570131716e-05 -4.30752239251589e-05 1.5708000018554673
+  hidden rotation_5 0.9999999981470916 4.304534462742676e-05 -4.3045502742096724e-05 1.5708000018529082
+  translation 4.052826288674621 -3.7827736858537695 -0.0030075402027198717
+  rotation 0.0006598445655133826 0.0002745521063247788 0.9999997446131125 -2.3561954537597734
+}
+SolidBox {
+  translation -3.16522 -4.28345 0.25
+  size 0.5 0.5 0.5
+  appearance PBRAppearance {
+    baseColorMap ImageTexture {
+      url [
+        "../Final_Mobi/Markers/1.jpg"
+      ]
+    }
+    roughness 0.5
+    metalness 0
+    textureTransform TextureTransform {
+    }
+  }
+}
+SolidBox {
+  translation -0.509969 -4.34245 0.25
+  name "box(11)"
+  size 0.5 0.5 0.5
+  appearance PBRAppearance {
+    baseColorMap ImageTexture {
+      url [
+        "../Final_Mobi/Markers/2.jpg"
+      ]
+    }
+    roughness 0.5
+    metalness 0
+    textureTransform TextureTransform {
+    }
+  }
+}
+SolidBox {
+  translation 2.03113 -4.35591 0.25
+  name "box(12)"
+  size 0.5 0.5 0.5
+  appearance PBRAppearance {
+    baseColorMap ImageTexture {
+      url [
+        "../Final_Mobi/Markers/3.jpg"
+      ]
+    }
+    roughness 0.5
+    metalness 0
+    textureTransform TextureTransform {
+    }
+  }
+}
+TurtleBot3Burger {
+  hidden position_0_0 -1552.9373429881703
+  hidden position_0_1 4706.313448632883
+  hidden position_0_2 -26723.020890519354
+  hidden position2_0_2 -16.664102737263523
+  hidden position3_0_2 -809.6744971788207
+  hidden rotation_9 0 1 0 3.7218171918063767
+  hidden rotation_10 0.7765819009780612 -2.411498057050697e-07 0.6300163101644614 3.1415972821192626
+  hidden rotation_11 -0.2561105148221427 -0.9631867613240644 0.08172311183255748 4.217956109532052
+  translation 2.622119851202029 0.014864323471251197 -0.00024773920277730566
+  rotation 0.0023210953397407616 5.626374677659089e-05 0.9999973046717748 -3.0888976168989366
+  controller "<extern>"
+  extensionSlot [
+    Camera {
+      translation -0.01 -2.91896e-07 0.03
+      rotation 0 0 1 -5.307179586466759e-06
+      children [
+        Pose {
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.254902 0 0.00392157
+                metalness 0
+                occlusionMapStrength 0
+                emissiveIntensity 0
+              }
+              geometry Cylinder {
+                height 0.02
+                radius 0.01
+              }
+            }
+          ]
+        }
+      ]
+      fieldOfView 1
+      width 128
+      height 128
+    }
+    RobotisLds01 {
+    }
+  ]
+}
