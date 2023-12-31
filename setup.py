@@ -23,7 +23,9 @@ setup(
     entry_points={
         'console_scripts': [
             'my_robot_driver = bot_controller.my_robot_driver:main',
-            'drive = bot_controller.publisher_driver_bot:main'
+            'kbd = bot_controller.keyboard_manager:main',
+            'print_image = bot_controller.camera_cv_sub:main',
+            'get_odom = bot_controller.odom_get:main'
         ],
     },
 )

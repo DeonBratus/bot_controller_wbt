@@ -1,6 +1,18 @@
 <?xml version="1.0" ?>
 <robot name="My robot">
     <webots>
-        <plugin type="my_package.my_robot_driver.MyRobotDriver" />
+        <device reference="camera" type="Camera">
+                <ros>
+                    <topicName>/camera</topicName>
+                    <alwaysOn>true</alwaysOn>
+                </ros>
+            </device>
+        <device reference="LDS-01" type="RoboticsLds01">
+            <ros>
+                <topicName>/scan</topicName>
+                <alwaysOn>true</alwaysOn>
+            </ros>
+        </device>
+        <plugin type="bot_controller.my_robot_driver.MyRobotDriver" />
     </webots>
 </robot>
