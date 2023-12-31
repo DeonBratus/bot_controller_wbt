@@ -50,8 +50,21 @@ ros2 launch webots_ros2_universal_robot multirobot_launch.py
 └── __worlds__\
     ├── my_world.wbt\
     └── spot2.wbt\
-
-
+## Запуск мира
+Далее необходимо запустить саму симуляцию мира
+```
+cd ~/ros2_ws
+source install/local_setup.sh
+```
+```
+ros2 launch bot_controlller robot_launch.py
+```
+Или с Rviz, добавив соотвтествующий параметер
+```
+ros2 launch bot_controller robot_launch.py rviz:=true
+```
+После этого должен запуститься webots и rviz. В терминале должно быть сообщение об успешном подключении контроллера. Если пристутсвуют ошибки свзяанные с webots, to необходимо удалить папки __install__, __build__, __log__ исправить ошибки, или установить нехватающие компоненты, а потом повторить __colcon build__. Удалять ранее упомянутые папки обязательно, иначе изменения не будут внесены.\
+Если будет ошибка, связанная с launch файлами, то в этом случае файл _bot_controller/launch/__robot_tools_launch.py___ скопировать в папку ___../install/bot_controller/share/bot_controller/launch___. Это происходит из-за того, что colcon не весгда переносит файлы в install или build.
 
 
 
