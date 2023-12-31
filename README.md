@@ -80,9 +80,48 @@ cd ~/ros2_ws
 source install/local_setup.sh
 ros2 run bot_controller print_image
 ```
+## получение данных с лидара
+Данные лидара уже по умолчанию публикуется в топик __/scan__. И подписавшись на него можно их получать. Пример базовой ноды для получения данных с лидара.
+```
+import rclpy
+from rclpy.node import Node
+from sensor_msgs.msg import LaserScan, Range
 
 
+class getLaser(Node):
+    
+    def __init__(self):
+        super().__init__('get_laser')
+        self.laser_sub = self.create_subscription(LaserScan, '/scan', self.get_laser, 10)
 
+    def get_laser(self, msg):
+        las_msg = msg
+        print(las_msg)        
+
+
+def main(args=None):
+    rclpy.init(args=args)
+    las_info = getLaser()
+    rclpy.spin(las_info)
+    las_info.destroy_node()
+    rclpy.shutdown()
+```
+И в файле setup.py добавить в entry_point в console_script добавит строчку
+```
+'<command_name> = bot_controller.<file_name>:main'
+```
+Например выглядит это так:
+```
+entry_points={
+        'console_scripts': [
+            'my_robot_driver = bot_controller.my_robot_driver:main',
+            'kbd = bot_controller.keyboard_manager:main',
+            'print_image = bot_controller.camera_cv_sub:main',
+            'get_odom = bot_controller.odom_get:main',
+            'get_las = bot_controller.laser_get:main'
+        ]
+```
+После этого консоль должно засыпать данными с лидара
 
 
 
