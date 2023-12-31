@@ -29,7 +29,6 @@ ros2 launch webots_ros2_universal_robot multirobot_launch.py
 .
 ├── __bot_controller__\
 │   ├── __init__.py\
-│   ├── aruco_edu.ipynb\
 │   ├── camera_cv_sub.py\
 │   ├── keyboard_manager.py\
 │   ├── my_robot_driver.py\
@@ -65,7 +64,22 @@ ros2 launch bot_controller robot_launch.py rviz:=true
 ```
 После этого должен запуститься webots и rviz. В терминале должно быть сообщение об успешном подключении контроллера. Если пристутсвуют ошибки свзяанные с webots, to необходимо удалить папки __install__, __build__, __log__ исправить ошибки, или установить нехватающие компоненты, а потом повторить __colcon build__. Удалять ранее упомянутые папки обязательно, иначе изменения не будут внесены.\
 Если будет ошибка, связанная с launch файлами, то в этом случае файл _bot_controller/launch/__robot_tools_launch.py___ скопировать в папку ___../install/bot_controller/share/bot_controller/launch___. Это происходит из-за того, что colcon не весгда переносит файлы в install или build.
-
+## Запуск нод
+### Управление с помощью клавиатуры 
+Сначала необходимо запустить мир по инструкции выше. После, в новом терминале ввести следующее\
+```
+cd ~/ros2_ws
+source install/local_setup.sh
+ros2 run teleop_twist_keyboard teleop_twist_keyboard
+```
+Это уже встроенный в базовый ROS2 пакет для управления по twist. Управление будет указано в терминале. Также в нем можно будет указать скорость поворота. keyboard_manager.py на данный момент не работает. Преобразование передвижения находится в файле _bot_controller/my_robot_driver.py_ в методе _step_.
+### Получение данных с камеры
+Получение данных с камера и вывод изображения находтся в файле _bot_controller/camera_sv_sub.py_. Для запуска этой ноды необходимо ввести команду в новом терминале
+```
+cd ~/ros2_ws
+source install/local_setup.sh
+ros2 run bot_controller print_image
+```
 
 
 
