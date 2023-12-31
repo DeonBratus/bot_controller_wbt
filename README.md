@@ -27,32 +27,32 @@ ros2 launch webots_ros2_universal_robot multirobot_launch.py
 ```
 После этого в папку необходимо создать в папке __src__ папку __bot_controller__ и закинуть все файлы с этого пакета, должна получится следующая структура\
 .
-├── __bot_controller__
-│   ├── __init__.py
-│   ├── aruco_edu.ipynb
-│   ├── camera_cv_sub.py
-│   ├── keyboard_manager.py
-│   ├── my_robot_driver.py
-│   └── odom_get.py
-├── __controllers__
-│   └── govno_controller
-│       └── govno_controller.py
-├── __launch__
-│   ├── robot_launch.py
-│   └── robot_tools_launch.py
-├── package.xml
-├── __resource__
-│   ├── bot_controller
-│   └── my_robot.urdf
-├── setup.cfg
-├── setup.py
-├── __test__
-│   ├── test_copyright.py
-│   ├── test_flake8.py
-│   └── test_pep257.py
-└── __worlds__
-    ├── my_world.wbt
-    └── spot2.wbt
+├── __bot_controller__\
+│   ├── __init__.py\
+│   ├── aruco_edu.ipynb\
+│   ├── camera_cv_sub.py\
+│   ├── keyboard_manager.py\
+│   ├── my_robot_driver.py\
+│   └── odom_get.py\
+├── __controllers__\
+│   └── govno_controller\
+│       └── govno_controller.py\
+├── __launch__\
+│   ├── robot_launch.py\
+│   └── robot_tools_launch.py\
+├── package.xml\
+├── __resource__\
+│   ├── bot_controller\
+│   └── my_robot.urdf\
+├── setup.cfg\
+├── setup.py\
+├── __test__\
+│   ├── test_copyright.py\
+│   ├── test_flake8.py\
+│   └── test_pep257.py\
+└── __worlds__\
+    ├── my_world.wbt\
+    └── spot2.wbt\
 
 
 
