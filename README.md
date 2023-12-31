@@ -34,9 +34,6 @@ ros2 launch webots_ros2_universal_robot multirobot_launch.py
 │   ├── keyboard_manager.py\
 │   ├── my_robot_driver.py\
 │   └── odom_get.py\
-├── __controllers__\
-│   └── govno_controller\
-│       └── govno_controller.py\
 ├── __launch__\
 │   ├── robot_launch.py\
 │   └── robot_tools_launch.py\
