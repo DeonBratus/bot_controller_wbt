@@ -63,7 +63,7 @@ ros2 launch bot_controller robot_launch.py
 ros2 launch bot_controller robot_launch.py rviz:=true
 ```
 После этого должен запуститься webots и rviz. В терминале должно быть сообщение об успешном подключении контроллера. Если пристутсвуют ошибки свзяанные с webots, to необходимо удалить папки __install__, __build__, __log__ исправить ошибки, или установить нехватающие компоненты, а потом повторить __colcon build__. Удалять ранее упомянутые папки обязательно, иначе изменения не будут внесены.\
-###Вылет webots при запуске
+### Вылет webots при запуске
 Если webots выелетит, то это связанно с launch файлами, в этом случае нужно файл _bot_controller/launch/__robot_tools_launch.py___ скопировать в папку ___../install/bot_controller/share/bot_controller/launch___. Это происходит из-за того, что colcon не весгда переносит файлы в install или build.
 ## Запуск нод
 ### Управление с помощью клавиатуры 
