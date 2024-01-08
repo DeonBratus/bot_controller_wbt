@@ -56,7 +56,7 @@ cd ~/ros2_ws
 source install/local_setup.sh
 ```
 ```bash
-ros2 launch bot_controlller robot_launch.py
+ros2 launch bot_controller robot_launch.py
 ```
 Или с Rviz, добавив соотвтествующий параметер
 ```bash
