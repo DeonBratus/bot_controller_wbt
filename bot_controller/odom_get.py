@@ -1,14 +1,16 @@
 from rclpy.node import Node
 from nav_msgs.msg import Odometry
 import rclpy
-
+import time
 class GetOdom(Node):
     def __init__(self):
         super().__init__('odom_getter')
-        self.odom_subscriber = self.create_subscription(Odometry, '/odom', self.__getting_odom, 10)
+        self.odom_subscriber = self.create_subscription(Odometry, '/odom', self.odometry_callback, 1)
+    
+    def odometry_callback(self, msg: Odometry):
+        time.sleep(0.4)
+        print(msg.pose.pose.position.x, msg.pose.pose.position.y)
 
-    def __getting_odom(self, msg):
-        print(msg)
 
 
 def main(args=None):

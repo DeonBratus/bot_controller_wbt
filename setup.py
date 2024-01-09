@@ -25,7 +25,8 @@ setup(
             'my_robot_driver = bot_controller.my_robot_driver:main',
             'kbd = bot_controller.keyboard_manager:main',
             'print_image = bot_controller.camera_cv_sub:main',
-            'get_odom = bot_controller.odom_get:main'
+            'get_odom = bot_controller.odom_get:main',
+            'get_las = bot_controller.laser_get:main',
         ],
     },
 )

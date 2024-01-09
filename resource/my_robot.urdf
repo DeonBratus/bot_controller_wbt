@@ -1,18 +1,49 @@
 <?xml version="1.0" ?>
 <robot name="My robot">
     <webots>
+
         <device reference="camera" type="Camera">
                 <ros>
                     <topicName>/camera</topicName>
                     <alwaysOn>true</alwaysOn>
                 </ros>
             </device>
-        <device reference="LDS-01" type="RoboticsLds01">
+
+        <device reference="LDS-01" type="Lidar">
             <ros>
-                <topicName>/scan</topicName>
+                <enabled>true</enabled>
                 <alwaysOn>true</alwaysOn>
             </ros>
         </device>
+
         <plugin type="bot_controller.my_robot_driver.MyRobotDriver" />
+        
+        <joint name="right wheel motor">
+            <state_interface name="position"/>
+            <command_interface name="velocity"/>
+        </joint>
+
+        <joint name="left wheel motor">
+            <state_interface name="position"/>
+            <command_interface name="velocity"/>
+        </joint>
+
+     <plugin type="webots_ros2_driver::Ros2IMU">
+            <enabled>true</enabled>
+            <updateRate>20</updateRate>
+            <topicName>/imu</topicName>
+            <alwaysOn>true</alwaysOn>
+            <frameName>imu_link</frameName>
+            <inertialUnitName>inertial_unit</inertialUnitName>
+            <gyroName>gyro</gyroName>
+            <accelerometerName>accelerometer</accelerometerName>
+    </plugin>
+
+    <publish_odom>true</publish_odom>
+    <publish_odom_tf>true</publish_odom_tf>
+    <publish_wheel_tf>true</publish_wheel_tf>
+
+    <odometry_frame>odom</odometry_frame>
+    <robot_base_frame>base_link</robot_base_frame>
     </webots>
 </robot>
